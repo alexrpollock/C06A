@@ -12,6 +12,8 @@
  */
 import java.util.ArrayList;
 
+//import Burner.Temperature;
+
 public class Stove {
 	// Our stove will have 4 burners
 	public final static int NUM_BURNERS = 4;
@@ -24,12 +26,20 @@ public class Stove {
 			burners.add(new Burner());
 	}
 	
-	/* 
-	 * You must write the following method
+	/**
+	 * displayStove calls displayBurner for all of the burners
+	 * If one of the burners is BLAZING a warning message is displayed
 	 */
 	public void displayStove() {
+		boolean isBlazing = false;
 		for (int i = 0; i < NUM_BURNERS; i++) {
 			burners.get(i).displayBurner();
+			if( burners.get(i).getTemp() == Burner.Temperature.BLAZING ) {
+				isBlazing = true;
+			}
+		}
+		if(isBlazing) {
+			System.out.println("RED LIGHT - HOT BURNER ALERT");
 		}
 	}
 	
