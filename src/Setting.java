@@ -6,6 +6,7 @@
  * @author Alex Pollock
  * @author Jay Harrison
  * @author Cassi VanDeventer
+ * 
  * enum type Setting for use in a burner
  * used as part of the Burner and Stove classes
  */
